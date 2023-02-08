@@ -1,0 +1,12 @@
+{
+    
+        "form.title": "Title",
+        "form.description": "Description",
+        "form.content": "Content",
+        "form.caducable": "Expirable",
+        "form.comentable": "Commentable",
+        "form.acceso": "Access",
+        "form.privado": "private",
+        "form.publico": "public"
+    
+}
