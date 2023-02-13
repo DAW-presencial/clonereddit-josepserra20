@@ -16,9 +16,14 @@ class PostController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index() :JsonResponse
     {
-        
+
+        $user = Auth::user();
+        $posts = Post::where('user_id', $user->id)->get();
+
+        return Response::json($posts);
+
     }
 
     /**
@@ -73,9 +78,12 @@ class PostController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show($id) :JsonResponse
     {
         //
+        $post = Post::find($id);
+
+        return response()->json($post);
     }
 
     /**
